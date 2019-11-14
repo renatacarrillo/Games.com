@@ -52,19 +52,19 @@
         <nav id="lista-menu">
           <ul>
             <li>
-              <a class="border-button ft-escuro" href="../Playstation/playstationgames.php"><span><img
+              <a class="border-button ft-escuro" href="../produto/playstationgames.php"><span><img
                     src="<?php echo $conf['url'] ?>/images/icones/ps4-control.svg"></span>Playstation</a>
             </li>
             <li>
-              <a class="border-button ft-escuro" href="../Xbox/xboxgames.php"><span><img
+              <a class="border-button ft-escuro" href="../produto/xboxgames.php"><span><img
                     src="<?php echo $conf['url'] ?>/images/icones/xbox-control.svg"></span>Xbox</a>
             </li>
             <li>
-              <a class="border-button ft-escuro" href="../Nintendo/nintendogames.php"><span><img
+              <a class="border-button ft-escuro" href="../produto/nintendogames.php"><span><img
                     src="<?php echo $conf['url'] ?>/images/icones/nintendo-swtch.png"></span>Nintendo</a>
             </li>
             <li>
-              <a class="border-button ft-escuro" href="../Todos/todosgames.php"><span><img
+              <a class="border-button ft-escuro" href="../produto/todosgames.php"><span><img
                     src="<?php echo $conf['url'] ?>/images/icones/joystick-control.svg"></span>Todos</a>
             </li>
           </ul>
