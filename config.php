@@ -7,6 +7,6 @@ return [
   'url'  => 'http://'.$_SERVER['HTTP_HOST'].$dir,
   'host' => 'localhost',
   'user' => 'root',
-  'pass' => 'usbw',
+  'pass' => '060519',
   'data' => 'games_com',
 ];

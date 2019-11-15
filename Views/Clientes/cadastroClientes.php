@@ -1,5 +1,9 @@
 <?php
 $conf = include $_SERVER['DOCUMENT_ROOT'] . '/Games.com/config.php';
+
+$cadastro = $_GET['cadastroClientes'];
+
+require $conf['path'].'/Controllers/c_cliente.php';
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -41,30 +45,30 @@ $conf = include $_SERVER['DOCUMENT_ROOT'] . '/Games.com/config.php';
 
   <div class="form-group inputGroup">
     <label>Nome</label>
-    <input type="text" class="form-control" id="nomecliente" aria-describedby="" placeholder="Digite seu nome">
+    <input type="text" class="form-control box-search" id="nome" aria-describedby="" placeholder="Digite seu nome">
   </div>
 
   <div class="form-group inputGroup">
     <label>E-mail</label>
-    <input type="email" class="form-control" id="emailcliente" placeholder="Digite sua senha">
+    <input type="email" class="form-control box-search" id="email" placeholder="Digite sua senha">
   </div>
 
   <div class="form-group inputGroup">
     <label>CPF</label>
-    <input type="number" class="form-control" id="cpfcliente" aria-describedby="" placeholder="Digite seu CPF">
+    <input type="number" class="form-control box-search" id="cpf" aria-describedby="" placeholder="Digite seu CPF">
   </div>
 
   <div class="form-group inputGroup">
     <label>Celular</label>
-    <input type="number" class="form-control" id="celularcliente" placeholder="Digite seu número">
+    <input type="number" class="form-control box-search" id="telefone" placeholder="Digite seu número">
   </div>
 
   <div class="form-group inputGroup">
     <label>Senha</label>
-    <input type="password" class="form-control" id="senha" placeholder="Digite sua senha">
+    <input type="password" class="form-control box-search" id="senha" placeholder="Digite sua senha">
   </div>
 
-  <button type="submit" class="btn btn-success botao-cadastro">Cadastrar</button>
+  <button type="submit" class="btn btn-success botao-cadastro box-search" id="cadastroClientes">Cadastrar</button>
 
 </form>
   

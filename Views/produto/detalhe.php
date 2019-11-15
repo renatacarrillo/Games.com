@@ -45,7 +45,7 @@ require $conf['path'].'/Controllers/c_produto.php';
                 <?php echo $infoProduto['nome_prod'] ."-" . $infoProduto['nome_categoria']?>
               </h1>
               <p class="card-text pt-2"><small class="text-muted">Por Apenas</small></p>
-              <p class="card-text h2 mt-n3 ft-laranja"><?php echo $infoProduto['precounitario']?>
+              <p class="card-text h2 mt-n3 ft-laranja"><?php echo $infoProduto['valor_un']?>
               </p>
               <p class="card-text ft-branca">Em Estoque: <?php echo $infoProduto['estoque']?>
               </p>
