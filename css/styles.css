@@ -371,7 +371,7 @@ img.img-detalhe{
 .imagem-principal-nintendo{
   width: 100%;
   height: 300px;
-  background-image: url(../images/nintendo-principal);
+  background-image: url(../images/nintendo-principal.png);
   background-size: cover;
   margin-top: -0.99rem !important;
 
@@ -436,11 +436,11 @@ img.img-detalhe{
   width: 100%;
   height: 100px;
 }
-.principal-cadastro:hover{
+/* .principal-cadastro:hover{
   background-color: #000000;
   border-color: rgba(0, 0, 0, 0);
   color: #ff6f00;
-}
+} */
 
 /* .efeito:hover{
   background-color: #ff6f00;
@@ -468,6 +468,14 @@ img.img-detalhe{
   color: #666;
 }
 
+/* .dividor-cadastro::after, .dividor-cadastro::before {
+  box-sizing: border-box;
+} */
+
+.cadastroForm input{
+  padding-left: 9px;
+
+}
 
 .botao-cadastro{
   display: block;
