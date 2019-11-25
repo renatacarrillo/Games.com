@@ -34,7 +34,7 @@
           alt="">
         <div class="menu-entrar">
           <ul class="text-left">
-            <li><a href="#">Entrar</a></li>
+            <li><a href="../Clientes/loginCliente.php">Entrar</a></li>
             <li><a href="../Clientes/cadastroClientes.php">Cadastrar</a></li>
           </ul>
         </div>
