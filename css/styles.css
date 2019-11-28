@@ -214,22 +214,24 @@ body {
   width: 200px;
 }
 
-
 /*----------- ajuste da HOME -----------------*/
 input[type="search"],
-input{
+input {
   outline: none;
 }
 
 /*Destaques*/
 section.destaques {
-  max-height: 400px;
+  max-height: 350px;
   max-width: 100%;
   margin: 0 auto;
 }
 
-#carroselDestaques img {
-  max-height: 400px;
+#listaItensCarrosel .carousel-item {
+  height: 350px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left 75%;
 }
 
 /*** cards dos jogos **/
@@ -243,6 +245,7 @@ img.img-cover {
 
 .card-jogo:hover {
   box-shadow: 0px 0px 12px 0 #dadada;
+  transform: scale(1.01);
 }
 
 .btn-comprar {
@@ -263,13 +266,12 @@ img.img-cover {
   opacity: 1;
 }
 
-
-.box-detalhe-jogo{
-  box-shadow: 4px 3px 6px 1px rgba(176,176,176,1);
-  background-color: rgba(35,35,44,0.9);
+.box-detalhe-jogo {
+  box-shadow: 4px 3px 6px 1px rgba(176, 176, 176, 1);
+  background-color: rgba(35, 35, 44, 0.9);
 }
 
-.ico-favoritos{
+.ico-favoritos {
   height: 50px;
   width: 50px;
   position: relative;
@@ -278,128 +280,114 @@ img.img-cover {
   transition: transform 0.3s linear;
 }
 
-.ico-favoritos:hover{
+.ico-favoritos:hover {
   transform: rotate(0deg);
 }
 
-img.img-detalhe{
+img.img-detalhe {
   max-height: 500px;
 }
 
 /* --------------PÁGINA PLAYSTATION RENATA--------------*/
 
-.imagem-principal-playstation{
+.imagem-principal-playstation {
   width: 100%;
   height: 300px;
   background-image: url(../images/playstation-principal.png);
   background-size: cover;
   margin-top: -0.99rem !important;
-
 }
 
-.caixa-playstation{
+.caixa-playstation {
   text-align: left;
   margin-left: 35px;
   padding-top: 15px;
   width: 45%;
-
 }
 
-.display-playstation{
+.display-playstation {
   color: rgb(255, 255, 255);
   padding-top: 25px;
 }
 
-.display-playstation-2{
+.display-playstation-2 {
   color: rgba(255, 255, 255, 0.842);
   padding-top: 15px;
 }
 
-.jogos-playstation{
+.jogos-playstation {
   width: 200px;
   height: 300px;
   background-image: url(../images/xbox-jogo-1.png);
   background-size: cover;
   margin-left: 20px;
-
 }
 
-.divisorias-games{
-  border: 1px solid
-  rgb(102, 102, 102);
+.divisorias-games {
+  border: 1px solid rgb(102, 102, 102);
   border-top-color: rgb(48, 4, 241);
   border-top-style: solid;
   border-top-width: 1px;
   width: 100%;
 }
 
-
-
 /* --------------PÁGINA XBOX RENATA--------------*/
 
-.imagem-principal-xbox{
+.imagem-principal-xbox {
   width: 100%;
   height: 300px;
   background-image: url(../images/xbox-principal.png);
   background-size: cover;
   margin-top: -0.99rem !important;
-
 }
 
-.caixa-xbox{
+.caixa-xbox {
   text-align: left;
   margin-left: 35px;
   padding-top: 15px;
   width: 45%;
-
 }
 
-.display-xbox{
+.display-xbox {
   color: rgb(255, 255, 255);
   padding-top: 25px;
 }
 
-.display-xbox-2{
+.display-xbox-2 {
   color: rgba(255, 255, 255, 0.849);
   padding-top: 15px;
 }
 
-
-
 /* --------------PÁGINA NINTENDO RENATA--------------*/
 
-.imagem-principal-nintendo{
+.imagem-principal-nintendo {
   width: 100%;
   height: 300px;
   background-image: url(../images/nintendo-principal.png);
   background-size: cover;
   margin-top: -0.99rem !important;
-
 }
 
-.caixa-nintendo{
+.caixa-nintendo {
   text-align: left;
   margin-left: 35px;
   padding-top: 15px;
   width: 45%;
-
 }
 
-.display-nintendo{
+.display-nintendo {
   color: rgb(255, 255, 255);
   padding-top: 25px;
 }
 
-.display-nintendo-2{
+.display-nintendo-2 {
   color: rgba(255, 255, 255, 0.822);
   padding-top: 15px;
 }
 
-
-
 /* --------------PÁGINA TODOS RENATA--------------*/
 
-.imagem-principal-todos{
+.imagem-principal-todos {
   width: 100%;
   height: 300px;
   background-image: url(../images/todos-principal.png);
@@ -407,36 +395,39 @@ img.img-detalhe{
   margin-top: -0.99rem !important;
 }
 
-.efeito-hov:hover{
+.efeito-hov:hover {
   background-color: #ff6f00;
   border-color: #ff6f00;
 }
 
-.caixa-todos{
+.caixa-todos {
   text-align: left;
   margin-left: 35px;
   padding-top: 15px;
   width: 45%;
 }
 
-.display-todos{
+.display-todos {
   color: rgb(7, 7, 7);
   padding-top: 25px;
 }
 
-.display-todos-2{
+.display-todos-2 {
   color: rgba(0, 0, 0, 0.699);
   padding-top: 15px;
 }
 
-
 /* --------------PÁGINA CADASTRO CLIENTES RENATA--------------*/
 
-.principal-cadastro{
+.principal-cadastro {
   width: 100%;
   height: 100px;
 }
+<<<<<<< HEAD
 /* .principal-cadastro:hover{
+=======
+.principal-cadastro:hover {
+>>>>>>> 288034d575801707772c35ea415792ab3e4c95c1
   background-color: #000000;
   border-color: rgba(0, 0, 0, 0);
   color: #ff6f00;
@@ -447,27 +438,34 @@ img.img-detalhe{
   border-color: rgba(0, 0, 0, 0);
 } */
 
-.caixa-cadastro{
+.caixa-cadastro {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 28px;
 }
 
-.paragrafo-cadastro{
+.paragrafo-cadastro {
   text-align: center;
   font-size: 14px;
   margin-bottom: 20px;
   color: #666;
 }
 
-.divisor-cadastro{
+.divisor-cadastro {
   margin-top: 3rem;
   text-align: center;
-  background-image: linear-gradient(180deg,transparent 10px,#e3e3e3 0,#e3e3e3 12px,transparent 0);
+  background-image: linear-gradient(
+    180deg,
+    transparent 10px,
+    #e3e3e3 0,
+    #e3e3e3 12px,
+    transparent 0
+  );
   color: #666;
 }
 
+<<<<<<< HEAD
 /* .dividor-cadastro::after, .dividor-cadastro::before {
   box-sizing: border-box;
 } */
@@ -478,44 +476,155 @@ img.img-detalhe{
 }
 
 .botao-cadastro{
+=======
+.botao-cadastro {
+>>>>>>> 288034d575801707772c35ea415792ab3e4c95c1
   display: block;
   margin: auto;
   margin-bottom: 15px;
 }
 
-.btn-success{
+.btn-success {
   margin-top: 20px;
   position: relative;
   width: 300px;
-  color:#fff;
+  color: #fff;
   background: #40cd28;
   border-color: #40cd28;
 }
 
-.btn-success:hover{
+.btn-success:hover {
   background-color: #ff6f00;
   border-color: #ff6f00;
-  
 }
 
-.display-cadastro{
+.display-cadastro {
   color: rgb(0, 0, 0);
   padding-top: 25px;
 }
 
-.caixa-formulario{
+.caixa-formulario {
   max-width: 500px;
   margin: 3rem auto 0;
-  
 }
 
-.cadastroForm{
+.cadastroForm {
   width: 400px;
   margin: auto;
 }
 
-.inputGroup{
+.inputGroup {
   width: 100%;
   margin-bottom: 15px;
   position: relative;
+}
+
+input:-internal-autofill-selected {
+  background-color: #20232c !important;
+  background-image: none !important;
+  color: #ffffff !important;
+}
+
+/* -------------- CSS PAGINAS ADM  ||  THAIS M.  --------------*/
+.btn-adm {
+  background-color: #ff6f00;
+  color: #20232c;
+  border: 1px solid #20232c;
+  transition: all 0.3s ease;
+  /* width: 50 px; */
+}
+
+.btn-adm-lista {
+  background-color: #ff6f00;
+  color: #20232c;
+  border: 1px solid #20232c;
+  transition: all 0.3s ease;
+  width: 50 px;
+}
+
+.quadro-sucess {
+  background-color: #ff6f00;
+  border: 2px solid #20232c;
+  padding: 50px;
+  margin: 100px;
+}
+
+.quadro-adm {
+  /* background-color: #ff6f00; */
+  border: 3px solid #ff6f00;
+}
+
+.input-adm {
+  /* background-color: #ff6f00; */
+  border: 2px solid #ff6f00;
+}
+
+.min-h-75 {
+  min-height: 75vh;
+}
+
+/*AJuste da pagina carrinho */
+.img-carrinho {
+  max-width: 60px;
+}
+
+.min-h-50 {
+  min-height: 55vh;
+}
+
+.linkCardsGames {
+  color: #20232c;
+}
+
+.linkCardsGames:hover {
+  text-decoration: none;
+  color: #000000;
+}
+
+.icone-carrinho {
+  position: absolute;
+  right: 10px;
+}
+
+.bdg-carrinho {
+  position: absolute;
+  right: 25%;
+  top: 30%;
+  transition: all 0.9ms linear;
+}
+
+.texto-carrosel h5,
+.texto-carrosel p {
+  text-shadow: 1px 1px 2px #000000;
+  /* text-shadow: 1px 1px 2px #000000, 0 0 1em #ff6f00, 0 0 0.2em #ff6f00; */
+  color: #ffffff;
+  font: 2em Georgia, "Bitstream Charter", "URW Bookman L",
+    "Century Schoolbook L", serif;
+}
+
+#listaItensCarrosel .btn-outline-light {
+  box-shadow: 1px 1px 2px #000000;
+}
+
+.texto-carrosel p {
+  font-size: 1.2em;
+}
+
+#listaItensCarrosel div:nth-child(odd) .carousel-caption {
+  text-align: right !important;
+}
+
+#listaItensCarrosel div:nth-child(even) .carousel-caption {
+  text-align: left !important;
+}
+
+.card-pedido {
+  font-size: 1.6rem;
+}
+.card-pedido p span {
+  font-size: 1.62rem;
+}
+
+.card-pedido img {
+  width: 180px;
 }

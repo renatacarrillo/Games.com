@@ -15,11 +15,11 @@ function carregarDestaques($conn)
     return $result;
 }
 
-/**FUNÇÃO PARA CARREGAR OS INTES DE SUGESTÃO DA HOME */
+/**FUNÇÃO PARA CARREGAR OS ITENS DE SUGESTÃO DA HOME */
 function carregarSugestoes($conn)
 {
     $sql = "SELECT  p.cod_produto, p.nome_prod, p.descricao_prod, p.cover_img, p.valor_un, g.nome_genero, c.nome_categoria
-      FROM produto p INNER JOIN genero g ON p.cod_genero = g.cod_genero INNER JOIN categoria c ON p.cod_categotia = c.cod_categoria
+      FROM produto p INNER JOIN genero g ON p.cod_genero = g.cod_genero INNER JOIN categoria c ON p.cod_categoria = c.cod_categoria
       WHERE p.estoque > 0 AND promocao = 0 ORDER BY rand() LIMIT 4 ";
 
     $stmt = $conn->prepare($sql) ;
@@ -29,11 +29,11 @@ function carregarSugestoes($conn)
     return $result;
 }
 
-/**FUNÇÃO PARA CARREGAR OS INTES DE SUGESTÃO DA HOME */
+/**FUNÇÃO PARA CARREGAR OS ITENS DE PROMOÇÃO DA HOME */
 function carregarPromocoes($conn)
 {
     $sql = "SELECT  p.cod_produto, p.nome_prod, p.descricao_prod, p.cover_img, p.valor_un, p.valor_promocao, g.nome_genero, c.nome_categoria
-    FROM produto p INNER JOIN genero g ON p.cod_genero = g.cod_genero INNER JOIN categoria c ON p.cod_categotia = c.cod_categoria 
+    FROM produto p INNER JOIN genero g ON p.cod_genero = g.cod_genero INNER JOIN categoria c ON p.cod_categoria = c.cod_categoria 
     WHERE p.estoque > 0 AND promocao = 1 ORDER BY rand() LIMIT 4 ";
 
     $stmt = $conn->prepare($sql) ;

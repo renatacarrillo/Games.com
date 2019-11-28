@@ -1,8 +1,13 @@
 <?php
-include_once '../../config.php';
 
-/**Titulo da pagina mudar de acordo com a pagina rederenciada */
+include_once '../../config.php';
 $titlePage = "Sua Loja de Games on-line";
+
+
+$Data = new DateTime();
+$carrinho= $Data->format('dmy') . rand(1, 99999) ;
+echo $carrinho;
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -11,8 +16,8 @@ $titlePage = "Sua Loja de Games on-line";
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="<?php echo $conf['url'] ?>/css/bootstrap.min.css">
-  <link rel="stylesheet" href="<?php echo $conf['url'] ?>/css/styles.css">
+  <link rel="stylesheet" href="<?php echo SITE_URL ?>/css/bootstrap.min.css">
+  <link rel="stylesheet" href="<?php echo SITE_URL ?>/css/styles.css">
 
   <title>
     Games.com | <?php echo $titlePage ;?>
@@ -21,7 +26,7 @@ $titlePage = "Sua Loja de Games on-line";
 
 <body>
   <!-- menu do site -->
-  <?php include $conf['path'].'/includes/menu.php';?>
+  <?php include SITE_PATH .'/includes/menu.php';?>
 
   <!--conteudo da pagina -->
   <main>
@@ -30,7 +35,7 @@ $titlePage = "Sua Loja de Games on-line";
   </main>
 
   <!-- footer site -->
-  <?php include $conf['path'].'/includes/footer.php';?>
+  <?php include SITE_PATH .'/includes/footer.php';?>
 </body>
 
 </html>
