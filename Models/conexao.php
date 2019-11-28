@@ -3,7 +3,7 @@
 $conf=[
   'host' => 'localhost',
   'user' => 'root',
-  'pass' => 'usbw',
+  'pass' => '060519',
   'data' => 'games_com'];
 
   

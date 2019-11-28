@@ -423,20 +423,6 @@ img.img-detalhe {
   width: 100%;
   height: 100px;
 }
-<<<<<<< HEAD
-/* .principal-cadastro:hover{
-=======
-.principal-cadastro:hover {
->>>>>>> 288034d575801707772c35ea415792ab3e4c95c1
-  background-color: #000000;
-  border-color: rgba(0, 0, 0, 0);
-  color: #ff6f00;
-} */
-
-/* .efeito:hover{
-  background-color: #ff6f00;
-  border-color: rgba(0, 0, 0, 0);
-} */
 
 .caixa-cadastro {
   display: flex;
@@ -465,20 +451,16 @@ img.img-detalhe {
   color: #666;
 }
 
-<<<<<<< HEAD
+
 /* .dividor-cadastro::after, .dividor-cadastro::before {
   box-sizing: border-box;
 } */
 
-.cadastroForm input{
+.cadastroForm input {
   padding-left: 9px;
-
 }
 
-.botao-cadastro{
-=======
 .botao-cadastro {
->>>>>>> 288034d575801707772c35ea415792ab3e4c95c1
   display: block;
   margin: auto;
   margin-bottom: 15px;

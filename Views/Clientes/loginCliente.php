@@ -1,5 +1,4 @@
 <?php
-$conf = include $_SERVER['DOCUMENT_ROOT'] . '/Games.com/config.php';
 $conf = require '../../config.php';
 
 ?>
@@ -10,17 +9,15 @@ $conf = require '../../config.php';
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet"
-    href="<?php echo $conf['url'] ?>/css/bootstrap.min.css">
-  <link rel="stylesheet"
-    href="<?php echo $conf['url'] ?>/css/styles.css">
+  <link rel="stylesheet" href="<?php echo SITE_URL ?>/css/bootstrap.min.css">
+  <link rel="stylesheet" href="<?php echo SITE_URL ?>/css/styles.css">
 
   <title>Games.com</title>
 </head>
 
 <body>
   <!-- menu do site -->
-  <?php include $conf['path'].'/includes/menu.php';?>
+  <?php include SITE_PATH.'/includes/menu.php'; ?>
   <!--conteudo da pagina -->
 
 <div class="container">
@@ -35,7 +32,7 @@ $conf = require '../../config.php';
 </body> -->
     <div class="row justify-content-md-center mt-5 ">
       <div class="col-md-4 mt-md-5">
-        <form class="mt-5 px-md-3" action='<?php echo $conf['url'] ?>/Controllers/c_cliente.php' method="post">
+        <form class="mt-5 px-md-3" action='<?php echo SITE_URL ?>/Controllers/c_cliente.php' method="post">
           <!-- <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
           <h1 class="h3 mb-3 font-weight-normal text-center">Faça login</h1>
           <label for="login_user" class="sr-only">Usuario</label>
@@ -47,7 +44,7 @@ $conf = require '../../config.php';
         </form>
         <div class="mb-3 mt-3 px-md-3">
           <p> Não tem cadastro?
-            <a href="<?php echo $conf['url'] ?>/Views/Clientes/cadastroClientes.php">Cadastre-se
+            <a href="<?php echo SITE_URL ?>/Views/Clientes/cadastroClientes.php">Cadastre-se
               aqui</a>
           </p>
         </div>
@@ -57,7 +54,7 @@ $conf = require '../../config.php';
 
 
   <!-- footer site -->
-  <?php include $conf['path'].'/includes/footer.php';?>
+  <?php include SITE_PATH.'/includes/footer.php'; ?>
 </body>
 
 </html>

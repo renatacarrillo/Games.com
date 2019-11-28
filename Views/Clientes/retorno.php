@@ -1,4 +1,4 @@
 <?php
-$conf = include $_SERVER['DOCUMENT_ROOT'] . '/Games.com/config.php';
+include_once '../../config.php';
 
-header("location:$conf[url]/Views/Clientes/loginCliente.php");
+header("location:". SITE_URL .  "/Views/Clientes/loginCliente.php");
