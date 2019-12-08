@@ -1,9 +1,13 @@
 <?php
-include_once '../../config.php';
-include   SITE_PATH . '/Controllers/c_valida_usuario.php';
+/*remover o warning do include e da session**/
+if (!defined('SITE_URL')) {
+  include_once '../../config.php';
+}
 
-$titlePage   = 'Cadastrar Produtos';
-$linha = [];
+include SITE_PATH . '/Controllers/c_valida_usuario.php';
+
+$titlePage = 'Cadastrar Produtos';
+// $linha = [];
 $itensProdHome = [];
 
 require SITE_PATH . '/Controllers/c_produto.php';
@@ -27,11 +31,13 @@ require SITE_PATH . '/Controllers/c_produto.php';
   <?php require SITE_PATH . '/includes/menu-adm.php'; ?>
   <main class="min-h-75">
     <div class="container">
-      <div class="row">
+      <div class="row justify-content-md-center">
         <h1>Produtos</h1>
       </div>
-      <div class="row">
-        <a class="col- 3 btn btn-dark btn-comprar my-2" href="<?php echo SITE_URL ?>/Views/produtos/create-prod.php" role="button">Cadastrar Produto</a>
+      <div class="row justify-content-md-center">
+        <a class="col-2 btn btn-dark btn-adm my-2" href="<?php echo SITE_URL ?>/Views/produtos/create-prod.php" role="button">Cadastrar Produto</a>
+      </div>
+      <div class="row justify-content-md-center">
         <table class=" table text-center ">
           <thead>
             <tr>
@@ -44,7 +50,7 @@ require SITE_PATH . '/Controllers/c_produto.php';
             </tr>
           </thead>
           <tbody>
-            <?php foreach ($itensProdHome as  $linha) { ?>
+            <?php foreach ($itensProdHome as $linha) { ?>
               <tr>
                 <td><?php echo $linha['cod_produto'] ?>
                 </td>
@@ -56,8 +62,7 @@ require SITE_PATH . '/Controllers/c_produto.php';
                 </td>
                 <td><?php echo $linha['estoque'] ?>
                 </td>
-                <td><a class="btn btn-dark btn-comprar" href="<?php echo SITE_URL ?>/Views/produto/alter-prod.php?produto=<?php echo $linha['cod_produto']; ?>" role="button">Alterar</a>
-                  <a class="btn btn-dark btn-comprar" href="<?php echo SITE_URL ?>/Controllers/c_produto.php?excluir=<?php echo $linha['cod_produto']; ?>" role="button">Excluir</a>
+                <td><a class="btn btn-dark btn-adm" href="<?php echo SITE_URL ?>/Views/produtos/alter-prod.php?produto=<?php echo $linha['cod_produto']; ?>" role="button">Alterar</a>
                 </td>
               </tr>
             <?php } ?>

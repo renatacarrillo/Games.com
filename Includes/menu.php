@@ -37,38 +37,32 @@ if (isset($_SESSION['carrinho'])) {
         </form>
       </div>
       <div class="col-md-3 text-right">
-        <?php
+      <?php
+        /**Tela de Login e Logout do cliente */
         /**Tela de Login e Logout do cliente */
         if (isset($_SESSION['nome_cliente'])) {
-            $nomeCliente = explode(" ", $_SESSION['nome_cliente']); ?>
-        <img id="icone-user" src="<?php echo SITE_URL ?>/images/icones/utilizador.svg" alt="">
-        <div class="menu-entrar">
-          <ul class="text-left">
-            <li>Olá, <strong><?php echo $nomeCliente[0] ?></strong>
-            </li>
-            <li><a href="<?php echo SITE_URL ?>/Controllers/c_cliente.php?sair=true">Sair</a>
-            </li>
-          </ul>
+          $nomeCliente = explode(" ", $_SESSION['nome_cliente']);?>
+      <a href="<?php echo SITE_URL ?>/Views/Clientes/alterarCliente.php"">
+      <img title="editar perfil" class="circle-rounded" id="icone-user" src="<?php echo SITE_URL ?>/images/icones/utilizador.svg" alt="">
+      </a>
+      <div class="menu-entrar">
+        <ul class="text-left">
+          <li>Olá, <strong><?php echo $nomeCliente[0] ?></strong>
+          </li>
+          </li>
+          <li><a href="<?php echo SITE_URL ?>/Controllers/c_cliente.php?sair=true">Sair</a>
+          </li>
+        </ul>
         </div>
         <?php
         } else { ?>
         <img id="icone-user" src="<?php echo SITE_URL ?>/images/icones/utilizador.svg" alt="">
         <div class="menu-entrar">
           <ul class="text-left">
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <li><a href="../Clientes/loginCliente.php">Entrar</a></li>
-            <li><a href="../Clientes/cadastroClientes.php">Cadastrar</a></li>
-=======
-            <li><a
-                href="<?php echo SITE_URL ?>/Views/Clientes/loginClientes.php">Entrar</a>
-=======
             <li><a href="<?php echo SITE_URL ?>/Views/Clientes/loginCliente.php">Entrar</a>
->>>>>>> bc8e3b11a3458b56d94e30fd6dfdf9e749a71cd3
             </li>
             <li><a href="<?php echo SITE_URL ?>/Views/Clientes/cadastroClientes.php">Cadastrar</a>
             </li>
->>>>>>> 288034d575801707772c35ea415792ab3e4c95c1
           </ul>
         </div>
         <?php }?>
@@ -94,30 +88,12 @@ if (isset($_SESSION['carrinho'])) {
         <nav id="lista-menu">
           <ul>
             <li>
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <a class="border-button ft-escuro" href="../produto/playstationgames.php"><span><img
-                    src="<?php echo $conf['url'] ?>/images/icones/ps4-control.svg"></span>Playstation</a>
+              <a class="border-button ft-escuro" href="<?php echo SITE_URL ?>/Views/home/index.php"><span><img
+                    src="<?php echo SITE_URL ?>/images/icones/home.svg" alt=""></span>Home</a>
             </li>
             <li>
-              <a class="border-button ft-escuro" href="../produto/xboxgames.php"><span><img
-                    src="<?php echo $conf['url'] ?>/images/icones/xbox-control.svg"></span>Xbox</a>
-            </li>
-            <li>
-              <a class="border-button ft-escuro" href="../produto/nintendogames.php"><span><img
-                    src="<?php echo $conf['url'] ?>/images/icones/nintendo-swtch.png"></span>Nintendo</a>
-            </li>
-            <li>
-              <a class="border-button ft-escuro" href="../produto/todosgames.php"><span><img
-                    src="<?php echo $conf['url'] ?>/images/icones/joystick-control.svg"></span>Todos</a>
-=======
-              <a class="border-button ft-escuro"
-                href="<?php echo SITE_URL ?>/Views/produtos/playstation.php"><span><img
-                    src="<?php echo SITE_URL  ?>/images/icones/ps4-control.svg"></span>Playstation</a>
-=======
               <a class="border-button ft-escuro" href="<?php echo SITE_URL ?>/Views/produtos/playstation.php"><span><img
-                    src="<?php echo SITE_URL  ?>/images/icones/ps4-control.svg" alt=""></span>Playstation</a>
->>>>>>> bc8e3b11a3458b56d94e30fd6dfdf9e749a71cd3
+                    src="<?php echo SITE_URL ?>/images/icones/ps4-control.svg" alt=""></span>Playstation</a>
             </li>
             <li>
               <a class="border-button ft-escuro" href="<?php echo SITE_URL ?>/Views/produtos/xbox.php"><span><img
@@ -128,15 +104,8 @@ if (isset($_SESSION['carrinho'])) {
                     src="<?php echo SITE_URL ?>/images/icones/nintendo-swtch.png" alt=""></span>Nintendo</a>
             </li>
             <li>
-<<<<<<< HEAD
-              <a class="border-button ft-escuro"
-                href="<?php echo SITE_URL ?>/Views/produtos/todos.php"><span><img
-                    src="<?php echo SITE_URL ?>/images/icones/joystick-control.svg"></span>Todos</a>
->>>>>>> 288034d575801707772c35ea415792ab3e4c95c1
-=======
               <a class="border-button ft-escuro" href="<?php echo SITE_URL ?>/Views/produtos/todos.php"><span><img
                     src="<?php echo SITE_URL ?>/images/icones/joystick-control.svg" alt=""></span>Todos</a>
->>>>>>> bc8e3b11a3458b56d94e30fd6dfdf9e749a71cd3
             </li>
           </ul>
         </nav>

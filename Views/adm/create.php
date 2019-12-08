@@ -1,5 +1,7 @@
 <?php
-include_once '../../config.php';
+if (!defined('SITE_URL')) {
+  include_once '../../config.php';
+}
 
 $titlePage = "Criar Usuário";
 ?>
@@ -17,57 +19,54 @@ $titlePage = "Criar Usuário";
 </head>
 
 <body>
-
-  <body>
-    <div class="container col-8 mt-5 pt-3 pb-5 ">
-      <div class="row justify-content-md-center text-center ">
-        <h1>Novo Usuário</h1>
-      </div>
-      <div class="row justify-content-md-center mt-3">
-        <div class="col-md-6">
-          <form action='<?php echo SITE_URL ?>/Controllers/c_usuario.php' method="post">
-            <div class="form-group mb-3">
-              <label class="sr-only" for="nome_usuario">Nome:</label>
-              <input class="form-control input-adm" type="text" name="nome_usuario" placeholder="Nome Completo">
+  <div class="container col-8 mt-5 pt-3 pb-5 ">
+    <div class="row justify-content-md-center text-center ">
+      <h1>Novo Usuário</h1>
+    </div>
+    <div class="row justify-content-md-center mt-3">
+      <div class="col-md-6">
+        <form action='<?php echo SITE_URL ?>/Controllers/c_usuario.php' method="post">
+          <div class="form-group mb-3">
+            <label class="sr-only" for="nome_usuario">Nome:</label>
+            <input class="form-control input-adm" type="text" name="nome_usuario" placeholder="Nome Completo">
+          </div>
+          <div class="form-group mb-3">
+            <label class="sr-only" for="telefone">Telefone:</label>
+            <input class="form-control input-adm" type="text" name="telefone" placeholder="Telefone">
+          </div>
+          <div class="form-group mb-3">
+            <label class="sr-only" for="cpf">CPF:</label>
+            <input class="form-control input-adm" type="text" name="cpf" placeholder="CPF">
+          </div>
+          <div class="form-group mb-3">
+            <label class="sr-only" for="email">E-Mail:</label>
+            <input class="form-control input-adm" type="text" name="email" placeholder="E-Mail">
+          </div>
+          <div class="form-group mb-3">
+            <label class="sr-only" for="logim">Login:</label>
+            <input class="form-control input-adm" type="text" name="logim" placeholder="Login">
+          </div>
+          <div class="form-row">
+            <div class="form-group col-6 mb-3">
+              <label class="sr-only" for="senha">Senha:</label>
+              <input class="form-control input-adm" type="password" name="senha" placeholder="Senha">
             </div>
-            <div class="form-group mb-3">
-              <label class="sr-only" for="telefone">Telefone:</label>
-              <input class="form-control input-adm" type="text" name="telefone" placeholder="Telefone">
+            <div class="form-group col-6 mb-3">
+              <label class="sr-only" for="password">Confirmar senha:</label>
+              <input class="form-control input-adm" type="password" placeholder="Confirmar Senha">
             </div>
-            <div class="form-group mb-3">
-              <label class="sr-only" for="cpf">CPF:</label>
-              <input class="form-control input-adm" type="text" name="cpf" placeholder="CPF">
-            </div>
-            <div class="form-group mb-3">
-              <label class="sr-only" for="email">E-Mail:</label>
-              <input class="form-control input-adm" type="text" name="email" placeholder="E-Mail">
-            </div>
-            <div class="form-group mb-3">
-              <label class="sr-only" for="logim">Login:</label>
-              <input class="form-control input-adm" type="text" name="logim" placeholder="Login">
-            </div>
-            <div class="form-row">
-              <div class="form-group col-6 mb-3">
-                <label class="sr-only" for="senha">Senha:</label>
-                <input class="form-control input-adm" type="password" name="senha" placeholder="Senha">
-              </div>
-              <div class="form-group col-6 mb-3">
-                <label class="sr-only" for="password">Confirmar senha:</label>
-                <input class="form-control input-adm" type="password" placeholder="Confirmar Senha">
-              </div>
-            </div>
-            <div class="d-flex justify-content-center">
-              <input class="btn btn-dark btn-block " type="hidden">
-              <input class="btn btn-dark btn-block btn-adm mx-2 col-3" type="submit" value="Cadastrar" name="cadastrar-usuario" id="cadastrar-usuario">
-              <input class="btn btn-dark btn-block btn-adm mx-2 col-3" type="reset" value="Limpar" id="limpar">
-              <a class="btn btn-dark btn-block btn-adm mx-2 col-3" href="./index.php">Cancelar</a>
-            </div>
-          </form>
-        </div>
+          </div>
+          <div class="d-flex justify-content-center">
+            <input class="btn btn-dark btn-block " type="hidden">
+            <input class="btn btn-dark btn-block btn-adm mx-2 col-3" type="submit" value="Cadastrar" name="cadastrar-usuario" id="cadastrar-usuario">
+            <input class="btn btn-dark btn-block btn-adm mx-2 col-3" type="reset" value="Limpar" id="limpar">
+            <a class="btn btn-dark btn-block btn-adm mx-2 col-3" href="./index.php">Cancelar</a>
+          </div>
+        </form>
       </div>
     </div>
-  </body>
-
+  </div>
 </body>
+
 
 </html>

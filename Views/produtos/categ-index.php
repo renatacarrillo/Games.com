@@ -1,7 +1,10 @@
 <?php
-include_once '../../config.php';
+/*remover o warning do include e da session**/
+if (!defined('SITE_URL')) {
+  include_once '../../config.php';
+}
 $categorias = [];
-include   SITE_PATH . '/Controllers/c_valida_usuario.php';
+include SITE_PATH . '/Controllers/c_valida_usuario.php';
 
 require SITE_PATH . '/Controllers/c_produto.php';
 // $linha = [];
@@ -23,17 +26,19 @@ require SITE_PATH . '/Controllers/c_produto.php';
   <?php include SITE_PATH . '/includes/menu-adm.php'; ?>
   <main class="min-h-75">
     <div class="container">
-      <div class="row">
+      <div class="row justify-content-md-center">
         <h1>Categoria Produtos</h1>
       </div>
-      <div class="row">
-        <a class="col-2 btn btn-dark btn-block btn-comprar my-2" href="<?php echo SITE_URL ?>/Views/produtos/create-categ.php" role="button">Cadastrar Categoria</a>
-        <table class=" table text-center " style="width: 100%">
+      <div class="row justify-content-md-center">
+        <a class="col-2 btn btn-dark btn-block btn-adm my-2" href="<?php echo SITE_URL ?>/Views/produtos/create-categ.php" role="button">Cadastrar Categoria</a>
+      </div>
+      <div class="row justify-content-md-center">
+        <table class="col-8 table text-center " style="width: 65%">
           <thead>
             <tr>
-              <th scope="col-5 text-center">Código</th>
-              <th scope="col-5 text-center">Nome</th>
-              <th scope="col-2 text-center">Ações</th>
+              <th>Código</th>
+              <th>Nome</th>
+              <th>Ações</th>
             </tr>
           </thead>
           <tbody>
@@ -42,8 +47,8 @@ require SITE_PATH . '/Controllers/c_produto.php';
                 <td><?php echo $linha['cod_categoria'] ?>
                 </td>
                 <td><?php echo $linha['nome_categoria'] ?>
-                <td><a class="btn btn-dark btn-adm-lista col-2" href="<?php echo SITE_URL ?>/Views/produtos/alter-categ.php?categoria=<?php echo $linha['cod_categoria']; ?>" role="button">Alterar</a>
-                  <a class="btn btn-dark btn-adm-lista col-2" href="<?php echo SITE_URL ?>/Controllers/c_produto.php?excluir=<?php echo $linha['cod_categoria']; ?>" role="button">Excluir</a>
+                <td class="col-3">
+                  <a class="btn btn-dark btn-adm" href="<?php echo SITE_URL ?>/Views/produtos/alter-categ.php?categoria=<?php echo $linha['cod_categoria']; ?>&nome=<?php echo $linha['nome_categoria']; ?>" role="button">Alterar</a>
                 </td>
               </tr>
             <?php } ?>

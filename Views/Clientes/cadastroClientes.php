@@ -34,41 +34,38 @@ $titlePage = "Cadastro de Clientes";
   </div>
   </div>
 
-  <div class="container caixa-formulario efeito">
+  <div class="container caixa-formulario efeito rounded">
     <div class="row align-items-center">
       <article class="mt-5 col-6">
 
-        <form class="cadastroForm">
 <form class="cadastroForm" action='<?php echo SITE_URL ?>/Controllers/c_cliente.php' method="post">
 
   <div class="form-group inputGroup">
     <label>Nome</label>
-    <input type="text" class="form-control box-search" name="nome_usuario" aria-describedby="" placeholder="Digite seu nome">
+    <input type="text" class="form-control box-search input-adm" name="nome_usuario" aria-describedby="" placeholder="Digite seu nome" required>
   </div>
 
   <div class="form-group inputGroup">
     <label>E-mail</label>
-    <input type="text" class="form-control box-search" name="email" placeholder="Digite sua senha">
+    <input type="text" class="form-control box-search input-adm" name="email" placeholder="Digite sua senha" required>
   </div>
 
   <div class="form-group inputGroup">
     <label>CPF</label>
-    <input type="text" class="form-control box-search" name="cpf" aria-describedby="" placeholder="Digite seu CPF">
+    <input type="text" class="form-control box-search input-adm" name="cpf" aria-describedby="" placeholder="Digite seu CPF" required>
   </div>
 
   <div class="form-group inputGroup">
     <label>Celular</label>
-    <input type="text" class="form-control box-search" name="telefone" placeholder="Digite seu número">
+    <input type="text" class="form-control box-search input-adm" name="telefone" placeholder="Digite seu número" required>
   </div>
 
   <div class="form-group inputGroup">
     <label>Senha</label>
-    <input type="password" class="form-control box-search" name="senha" placeholder="Digite sua senha">
+    <input type="password" class="form-control box-search input-adm" name="senha" placeholder="Digite sua senha" required>
   </div>
 
-
-        </form>
-  <input class="btn btn-success botao-cadastro box-search mx-2 col-3" type="submit" value="CADASTRAR" name="cadastrar" id="criar">
+  <input class="btn btn-dark btn-adm botao-cadastro box-search" type="submit" value="CADASTRAR" name="cadastrar" id="criar">
 
       </article>
     </div>
